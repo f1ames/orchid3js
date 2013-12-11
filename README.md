@@ -1,7 +1,7 @@
 orchid3js
 =========
 
-Library for building decision trees with js. Based on ID3 algorithm.
+*Library for building decision trees with js. Based on ID3 algorithm*.
 
 
 Pretty simple and straight forward to use. Just include the script e.g.
@@ -17,4 +17,4 @@ To test tree (or rather get decision) use getDecision method
 tree.getDecision(sampleData);
 ```
 
-See demo for working, testable example and sample view class for drawing the tree!
+See our demo (http://krzton.com/orchid3js.html) for working, testable example and sample view class for drawing the tree!
