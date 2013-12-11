@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Krzysztof Krztoń - s7461" />
+    
+	<title>orhcid3.js</title>
+    
+    <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="orchid3/orchid3.css" />    
+</head>
+<body>    
+    <div id="controls" class="jumbotron">
+        <h1>orchid3.js</h1>
+        <p class="lead">Building decision trees in js with ID3 algorithm. Try this demo:</p>
+        <div class="row demo">
+            <div class="col-md-8">    
+                <p>
+                    Training set <button type="button" class="btn btn-info btn-xs btn-sample-data">load sample data</button>:
+                    <textarea class="training-set"></textarea>
+                </p>
+                                
+            </div>
+            <div class="col-md-3 col-md-offset-1">
+                <p>
+                    Rows separator:
+                    <input type="text" class="rows-separator" value="" />
+                </p>
+                <p>
+                    Values separator:
+                    <input type="text" class="values-separator" value="" />
+                </p>
+                <button type="button" class="btn btn-success btn-lg btn-build-tree">Build tree</button>
+            </div>
+        </div>
+        <div class="row demo">
+            <div class="col-md-11">
+                Test tree:
+                <input type="text" class="test-values" value="" />
+                <button type="button" class="btn btn-info btn-lg btn-test-tree">Test tree</button>
+            </div>  
+            <div class="col-md-1">
+                <button type="button" class="btn btn-default btn-sm btn-toggle">hide</button>
+            </div>
+        </div>
+    </div>
+    <div id="board">
+    </div>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../src/orchid3.js"></script>
+    <script type="text/javascript" src="orchid3/orchid3.view.js"></script>
+    <script type="text/javascript" src="orchid3/ui.js"></script>
+</body>
+</html>
+
+
+
