@@ -15,9 +15,7 @@
                 self.loadSampleData();
             });
             $('.btn-build-tree').on('click', function() {
-                self.data = window.orchid3.Util.parseData($('.training-set').val(), $('.rows-separator').val(), $('.values-separator').val());
-                self.set = new window.orchid3.Set(self.data);
-                self.tree = new window.orchid3.Tree(self.set);
+                self.tree = window.orchid3.factory($('.training-set').val(), $('.rows-separator').val(), $('.values-separator').val());
                 self.view = new window.orchid3.View(self.tree, $('#board'));
                 self.view.draw();
                 self.hidePanel();
