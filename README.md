@@ -25,4 +25,4 @@ var set = 'sunny,hot,high,weak,no;sunny,hot,high,strong,no;overcast,hot,high,wea
 tree.getDecision(test); //should return 'no'
 ```
 
-See our [demo](http://krzton.com/orchid3.html) for working, testable example and sample view class for drawing the tree!
+See our [demo](http://f1ames.github.io/orchid3js) for working, testable example and sample view class for drawing the tree!
