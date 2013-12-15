@@ -35,11 +35,21 @@ module.exports = function(grunt) {
               src: "build/orchid3.js",
               dest: "build/orchid3.js"
             }
+        },
+        watch: {
+            scripts: {
+                files: ['src/*.js'],
+                tasks: ['concat', 'removelogging', 'uglify'],
+                options: {
+                    spawn: false,
+                },
+            } 
         }
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-remove-logging');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
     grunt.registerTask('default', ['concat', 'removelogging', 'uglify']);
 };
