@@ -1,0 +1,1 @@
+window.orchid3 = window.orchid3 || {};
