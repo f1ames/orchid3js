@@ -29,11 +29,17 @@ module.exports = function(grunt) {
             options: {
                 banner: banner
             }
+        },
+        removelogging: {
+            dist: {
+              src: "build/orchid3.js",
+              dest: "build/orchid3.js"
+            }
         }
-
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-remove-logging');
     
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['concat', 'removelogging', 'uglify']);
 };

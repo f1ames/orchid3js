@@ -78,7 +78,7 @@ window.orchid3 = window.orchid3 || {};
             if(maxIndex !== undefined) {
                 this.used[maxIndex] = true;
             }            
-            console.log('maxgain ' + maxIndex, max);
+            
             return maxIndex;
         },
         getGain: function(col) {
@@ -87,7 +87,7 @@ window.orchid3 = window.orchid3 || {};
             for(var i in sets) {
                 gain -= (sets[i].getLength()/this.length) * sets[i].getEntropy();
             }   
-            console.log('gain', gain);
+            
             return gain;            
         },
         getSubsets: function(col) {
@@ -103,7 +103,7 @@ window.orchid3 = window.orchid3 || {};
             for(var j in tmp) {
                 subsets[j] = new namespace.Set(tmp[j]);
             }
-            console.log('subsets', subsets);
+            
             return subsets;
         }
     };
@@ -140,7 +140,7 @@ window.orchid3 = window.orchid3 || {};
                     }
                 }
             }
-            console.log('v', node);
+            
             return node;
         }
     };

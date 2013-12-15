@@ -1,6 +1,3 @@
-/**
- * class View
- */
 (function(namespace) {
     
     var View = function(tree, $container) {
