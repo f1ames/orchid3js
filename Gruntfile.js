@@ -32,24 +32,31 @@ module.exports = function(grunt) {
         },
         removelogging: {
             dist: {
-              src: "build/orchid3.js",
-              dest: "build/orchid3.js"
+              src: 'build/orchid3.js',
+              dest: 'build/orchid3.js'
             }
         },
         watch: {
             scripts: {
                 files: ['src/*.js'],
-                tasks: ['concat', 'removelogging', 'uglify'],
+                tasks: ['concat', 'removelogging', 'uglify', 'copy'],
                 options: {
                     spawn: false,
                 },
             } 
+        },
+        copy: {
+            main: {
+                src: 'build/orchid3.js',
+                dest: 'demo/orchid3/orchid3.js'
+            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-remove-logging');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     
-    grunt.registerTask('default', ['concat', 'removelogging', 'uglify']);
+    grunt.registerTask('default', ['concat', 'removelogging', 'uglify', 'copy']);
 };
